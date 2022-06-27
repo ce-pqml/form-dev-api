@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attendees",
+  "info": {
+    "singularName": "attendee",
+    "pluralName": "attendees",
+    "displayName": "Attendee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
