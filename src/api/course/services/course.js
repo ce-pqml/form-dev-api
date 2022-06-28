@@ -7,6 +7,21 @@
 const { createCoreService } = require("@strapi/strapi").factories;
 
 module.exports = createCoreService("api::course.course", ({ strapi }) => ({
+  async find(...args) {
+    const { results, pagination } = await super.find({
+      ...args,
+      populate: {
+        signatures: {
+          populate: {
+            attendee: true,
+          },
+        },
+        speakers: true,
+      },
+    });
+
+    return { results, pagination };
+  },
   async findOne(ctx, params) {
     return strapi.query("api::course.course").findOne({
       where: {
