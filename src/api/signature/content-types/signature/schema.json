@@ -32,7 +32,7 @@
     "date": {
       "type": "datetime",
       "unique": false,
-      "required": true
+      "required": false
     },
     "attendee": {
       "type": "relation",
