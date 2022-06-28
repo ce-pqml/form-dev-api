@@ -12,16 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "attendee": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::attendee.attendee"
-    },
-    "course": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::course.course"
-    },
     "present": {
       "type": "boolean",
       "required": false
@@ -29,7 +19,7 @@
     "signature": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
@@ -43,6 +33,18 @@
       "type": "datetime",
       "unique": false,
       "required": true
+    },
+    "attendee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::attendee.attendee",
+      "inversedBy": "signatures"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "signatures"
     }
   }
 }

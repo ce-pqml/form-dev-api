@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "attendees",
+  "collectionName": "speakers",
   "info": {
-    "singularName": "attendee",
-    "pluralName": "attendees",
-    "displayName": "Attendee",
+    "singularName": "speaker",
+    "pluralName": "speakers",
+    "displayName": "Speaker",
     "description": ""
   },
   "options": {
@@ -20,12 +20,6 @@
       "type": "string",
       "required": true
     },
-    "signatures": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::signature.signature",
-      "mappedBy": "attendee"
-    },
     "email": {
       "type": "email",
       "required": true
@@ -36,6 +30,12 @@
     },
     "password": {
       "type": "string"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "speakers"
     }
   }
 }

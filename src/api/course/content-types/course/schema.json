@@ -28,10 +28,17 @@
       "type": "datetime",
       "required": true
     },
-    "attendees": {
+    "signatures": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::attendee.attendee"
+      "target": "api::signature.signature",
+      "mappedBy": "course"
+    },
+    "speakers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::speaker.speaker",
+      "inversedBy": "courses"
     }
   }
 }
