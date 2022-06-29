@@ -45,6 +45,9 @@
       "relation": "oneToMany",
       "target": "api::course-comment.course-comment",
       "mappedBy": "course"
+    },
+    "key": {
+      "type": "uid"
     }
   }
 }

@@ -35,7 +35,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::course.course",
-      "inversedBy": "speakers"
+      "mappedBy": "speakers"
     }
   }
 }
