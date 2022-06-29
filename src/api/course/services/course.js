@@ -13,7 +13,16 @@ module.exports = createCoreService("api::course.course", ({ strapi }) => ({
       populate: {
         signatures: {
           populate: {
-            attendee: true,
+            attendee: {
+              populate: {
+                attendee_comments: true,
+              },
+            },
+          },
+        },
+        course_comments: {
+          populate: {
+            speaker: true,
           },
         },
         speakers: true,
@@ -31,7 +40,16 @@ module.exports = createCoreService("api::course.course", ({ strapi }) => ({
       populate: {
         signatures: {
           populate: {
-            attendee: true,
+            attendee: {
+              populate: {
+                attendee_comments: true,
+              },
+            },
+          },
+        },
+        course_comments: {
+          populate: {
+            speaker: true,
           },
         },
         speakers: true,

@@ -36,6 +36,12 @@
     },
     "password": {
       "type": "string"
+    },
+    "attendee_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attendee-comment.attendee-comment",
+      "mappedBy": "attendee"
     }
   }
 }

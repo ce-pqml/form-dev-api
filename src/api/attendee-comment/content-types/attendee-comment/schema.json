@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attendee_comments",
+  "info": {
+    "singularName": "attendee-comment",
+    "pluralName": "attendee-comments",
+    "displayName": "AttendeeComment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "speaker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::speaker.speaker"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "attendee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::attendee.attendee",
+      "inversedBy": "attendee_comments"
+    }
+  }
+}

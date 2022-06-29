@@ -39,6 +39,12 @@
       "relation": "manyToMany",
       "target": "api::speaker.speaker",
       "inversedBy": "courses"
+    },
+    "course_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course-comment.course-comment",
+      "mappedBy": "course"
     }
   }
 }
