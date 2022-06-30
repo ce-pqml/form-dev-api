@@ -9,10 +9,10 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-i18n": "4.2.0",
     "@strapi/plugin-users-permissions": "4.2.0",
+    "@strapi/provider-email-sendmail": "^4.2.2",
     "@strapi/strapi": "4.2.0",
     "better-sqlite3": "7.4.6",
     "pg": "^8.7.3",
