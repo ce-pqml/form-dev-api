@@ -49,16 +49,11 @@
     "key": {
       "type": "uid"
     },
-    "signature": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "signature_date": {
       "type": "datetime"
+    },
+    "signature": {
+      "type": "text"
     }
   }
 }

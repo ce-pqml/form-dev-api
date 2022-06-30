@@ -16,15 +16,6 @@
       "type": "boolean",
       "required": false
     },
-    "signature": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
     "key": {
       "type": "uid",
       "required": true
@@ -45,6 +36,9 @@
       "relation": "manyToOne",
       "target": "api::course.course",
       "inversedBy": "signatures"
+    },
+    "signature": {
+      "type": "text"
     }
   }
 }
