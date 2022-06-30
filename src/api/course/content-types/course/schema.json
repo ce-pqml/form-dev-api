@@ -37,7 +37,7 @@
     "speakers": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::speaker.speaker",
+      "target": "plugin::users-permissions.user",
       "inversedBy": "courses"
     },
     "course_comments": {

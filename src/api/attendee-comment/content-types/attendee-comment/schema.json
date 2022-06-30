@@ -4,7 +4,8 @@
   "info": {
     "singularName": "attendee-comment",
     "pluralName": "attendee-comments",
-    "displayName": "AttendeeComment"
+    "displayName": "AttendeeComment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,7 @@
     "speaker": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::speaker.speaker"
+      "target": "plugin::users-permissions.user"
     },
     "course": {
       "type": "relation",
