@@ -4,6 +4,7 @@
 /**
  *  signature controller
  */
+
 const fs = require("fs");
 const path = require("path");
 const { createCoreController } = require("@strapi/strapi").factories;
@@ -53,14 +54,6 @@ module.exports = createCoreController(
           signature,
         }
       );
-
-      // await strapi.plugins["email"].services.email.send({
-      //   to: env("SMTP_DEFAULT_MAIL"),
-      //   from: env("SMTP_DEFAULT_MAIL"),
-      //   replyTo: env("SMTP_DEFAULT_MAIL"),
-      //   subject: "Demande de signature - " + course.title,
-      //   html: "Hello world!",
-      // });
 
       ctx.body = { msg: "ok" };
     },
