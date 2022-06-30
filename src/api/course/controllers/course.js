@@ -56,7 +56,9 @@ module.exports = createCoreController("api::course.course", ({ strapi }) => ({
             .update(signature.id, {
               data: {
                 date: null,
-                date_limit: today.setHours(today.getHours() + 1),
+                date_limit: today.setHours(
+                  today.getHours() + process.env.DEFAULT_LIMIT_SIGNATURE / 60
+                ),
               },
             });
         }
