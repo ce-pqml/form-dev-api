@@ -39,6 +39,9 @@
     },
     "signature": {
       "type": "text"
+    },
+    "date_limit": {
+      "type": "datetime"
     }
   }
 }
