@@ -32,10 +32,20 @@ module.exports = createCoreService("api::course.course", ({ strapi }) => ({
     return { results, pagination };
   },
   async findOne(ctx, params) {
-    return strapi.query("api::course.course").findOne({
+    let where = {
       where: {
         id: ctx,
       },
+    };
+    if (isNaN(ctx)) {
+      where = {
+        where: {
+          key: ctx,
+        },
+      };
+    }
+    return strapi.query("api::course.course").findOne({
+      ...where,
       ...params,
       populate: {
         signatures: {
