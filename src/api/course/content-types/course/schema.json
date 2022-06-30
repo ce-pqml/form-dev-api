@@ -54,6 +54,9 @@
     },
     "signature": {
       "type": "text"
+    },
+    "qrcode_key": {
+      "type": "uid"
     }
   }
 }
