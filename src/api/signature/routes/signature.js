@@ -24,7 +24,7 @@ const customRouter = (innerRouter, extraRoutes = []) => {
 const myExtraRoutes = [
   {
     method: "GET",
-    path: "/:id/email",
+    path: "/signature/:id/email",
     handler: "api::signature.signature.sendMail",
   },
 ];
