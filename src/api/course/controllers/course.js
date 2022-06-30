@@ -38,10 +38,14 @@ module.exports = createCoreController("api::course.course", ({ strapi }) => ({
         const signature = signatures[index];
         const attendee = signature.attendee;
 
-        if (!signature.signature && signature.present === null) {
+        if (
+          !signature.signature &&
+          signature.present === null &&
+          attendee.email
+        ) {
           await strapi.plugins["email"].services.email.sendTemplatedEmail(
             {
-              to: process.env.SMTP_DEFAULT_MAIL,
+              to: attendee.email,
             },
             emailTemplate,
             {
