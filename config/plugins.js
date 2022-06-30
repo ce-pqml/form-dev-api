@@ -5,9 +5,10 @@ module.exports = ({ env }) => ({
       providerOptions: {
         host: env("SMTP_HOST", "smtp.example.com"),
         port: env("SMTP_PORT", 587),
+        // secure: false,
         auth: {
-          user: env("SMTP_USERNAME"),
-          pass: env("SMTP_PASSWORD"),
+          apiKey: env("SMTP_USERNAME"),
+          apiSecret: env("SMTP_PASSWORD"),
         },
         // ... any custom nodemailer options
       },
